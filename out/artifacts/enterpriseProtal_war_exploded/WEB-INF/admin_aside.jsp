@@ -79,7 +79,7 @@
                 <a href="${pageContext.servletContext.contextPath}/LogoutServlet" class="logout01"><i class="fa fa-sign-out"></i>退出登录</a>
             </li>
             <li>
-                <a href="" target="_blank"><i class="fa fa-paper-plane"></i>前台首页 </a>
+                <a href="index.html" target="_blank"><i class="fa fa-paper-plane"></i>前台首页 </a>
             </li>
         </ul>
     </div>
