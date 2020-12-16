@@ -59,18 +59,21 @@ public class HTMLUtils {
 
     /**删除多余的文件*/
     public static void deleteTempFile(List src, Object tempFiles, ServletContext servletContext){
-
+            //
         ArrayList tf = (ArrayList)tempFiles;
         for (Object o : tf) {
             boolean contains = src.contains(o); /**把上传的多余临时文件删除*/
             if (!contains){
                 String temp =  (String)o;
-                System.out.println("临时文件 = "+temp);
-                String substring = temp.substring(temp.indexOf("upload"));
-                String realPath = servletContext.getRealPath(substring);
-                File file = new File(realPath);
-                if (file.exists()){
-                    file.delete();
+                System.out.println("临时文件 ="+temp);
+                if(!temp.equals(""))//
+                {
+                    String substring = temp.substring(temp.indexOf("upload"));
+                    String realPath = servletContext.getRealPath(substring);
+                    File file = new File(realPath);
+                    if (file.exists()){
+                        file.delete();
+                    }
                 }
             }
         }

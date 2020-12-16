@@ -21,8 +21,8 @@
         </div>
         <div>
             <br/>
-            <h4 style="font-family: 等线;">企业官网管理系统</h4>
-            <h4  style="font-family:等线;">后台管理系统</h4>
+            <h4 style="font-family: 等线;">小花水产</h4>
+            <h4  style="font-family:等线;">管理系统</h4>
         </div>
     </div>
     <!-- 导航菜单 -->

@@ -6,6 +6,7 @@ import com.fmjava.service.NewsService;
 import com.fmjava.utils.HTMLUtils;
 import com.fmjava.utils.UploadUtils;
 import org.apache.commons.beanutils.BeanUtils;
+import sun.invoke.empty.Empty;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -70,13 +71,15 @@ public class addNewsServlet extends HttpServlet {
                 }
                 newsService.updateNews(news);
             }
-            //获取session中存放的临时文件
+            //获取session中存放的临时文件 此处有bog(已解决）
             Object object=request.getSession().getAttribute("newfileNames");
-            if(object!=null){
-                HTMLUtils.deleteTempFile(src,object,this.getServletContext());
 
+            System.out.println(object);
+            if(object!=null&&!object.equals("")){
+                HTMLUtils.deleteTempFile(src,object,this.getServletContext());
+                request.getSession().removeAttribute("newfileNames");//清空session
             }
-            request.getSession().removeAttribute("newfileNames");//清空session
+
             //让浏览器自己解析
             response.getWriter().write(this.getServletContext().getContextPath()+"/newListServlet?categoryId="+news.getCate());
 

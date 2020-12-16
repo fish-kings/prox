@@ -28,7 +28,7 @@
     background: none;">
 
         <div class="login-wrap">
-            <h1 style="font-family: 等线;font-weight: bolder;color: #5e5e5e;margin-top: 40px" align="center">疯码门户后台管理系统</h1>
+            <h1 style="font-family: 等线;font-weight: bolder;color: #5e5e5e;margin-top: 40px" align="center">小花水产管理系统</h1>
             <%--域当中有没有错误信息  如果有错误信息 把错误信息进行显示--%>
             <c:if test="${!empty loginInfo}">
                 <h1 style="font-weight: normal;font-size: 20px; color: red;margin-top: 20px" align="center">${loginInfo}</h1>
