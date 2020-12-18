@@ -35,7 +35,7 @@
             </c:if>
 
             <div class="avatar2">
-                <img src="${pageContext.servletContext.contextPath}/assets/img/logo.png"  class="img-circle" alt="">
+                <img src="${pageContext.servletContext.contextPath}/images/logo.png"  class="img-circle" alt="">
             </div>
             <form id="login_form" action="${pageContext.servletContext.contextPath}/LoginServlet" method="post" class="col-md-offset-1 col-md-10">
                 <div class="input-group input-group-lg">

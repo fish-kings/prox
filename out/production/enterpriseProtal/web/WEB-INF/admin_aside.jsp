@@ -17,7 +17,7 @@
     <!-- 个人资料 -->
     <div id="user_info" class="profile">
         <div class="avatars">
-            <img width="100" height="80" src="${pageContext.servletContext.contextPath}/assets/img/logo3.png" alt="">
+            <img width="100" height="80" src="./images/logo.png" alt="">
         </div>
         <div>
             <br/>
@@ -79,7 +79,7 @@
                 <a href="${pageContext.servletContext.contextPath}/LogoutServlet" class="logout01"><i class="fa fa-sign-out"></i>退出登录</a>
             </li>
             <li>
-                <a href="index.html" target="_blank"><i class="fa fa-paper-plane"></i>前台首页 </a>
+                <a href="index.jsp" target="_blank"><i class="fa fa-paper-plane"></i>前台首页 </a>
             </li>
         </ul>
     </div>
