@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>没有感情的码农</title>
-    <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/images/favicon.ico ">
+    <link rel="shortcut icon"herf="${pageContext.servletContext.contextPath}/assets/img/logo3.ico">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/css/index.css">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/css/custom.css">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/font-awesome/css/font-awesome.css">
@@ -35,7 +35,7 @@
             </c:if>
 
             <div class="avatar2">
-                <img src="${pageContext.servletContext.contextPath}/images/logo.png"  class="img-circle" alt="">
+                <img src="${pageContext.servletContext.contextPath}/assets/img/logo3.png"  class="img-circle" alt="">
             </div>
             <form id="login_form" action="${pageContext.servletContext.contextPath}/LoginServlet" method="post" class="col-md-offset-1 col-md-10">
                 <div class="input-group input-group-lg">

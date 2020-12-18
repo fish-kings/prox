@@ -17,7 +17,7 @@
     <!-- 个人资料 -->
     <div id="user_info" class="profile">
         <div class="avatars">
-            <img width="100" height="80" src="./images/logo.png" alt="">
+            <img width="100" height="80" src="${pageContext.servletContext.contextPath}/assets/img/logo3.png" alt="">
         </div>
         <div>
             <br/>
