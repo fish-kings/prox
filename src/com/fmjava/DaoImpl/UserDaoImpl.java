@@ -6,6 +6,8 @@ import com.fmjava.utils.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
+import java.sql.SQLException;
+
 public class UserDaoImpl implements UserDao {
     @Override
     public User selectUser(User user) {
@@ -19,4 +21,16 @@ public class UserDaoImpl implements UserDao {
         }
         return user1;
     }
+    public  void updateUser(User user,String password){
+        QueryRunner queryRunner = JDBCUtils.getQueryRunner();
+        String sql="update core_user set password=? where username=?";
+        try {
+            queryRunner.update(sql, password,user.getUsername());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
+}
+
 }

@@ -47,9 +47,9 @@ public class NewsDaoImpl implements NewsDao {
 
     @Override
     public void updateNews(News news) {
-        String sql  = "update core_page set title=?,cover=?,body=?,news_img=? where id = ?";
+        String sql  = "update core_page set title=?,cover=?,body=?,news_img=?,create_time=? where id = ?";
         try {
-            queryRunner.update(sql, news.getTitle(),news.getCover(),news.getBody(),news.getNews_img(),news.getId());
+            queryRunner.update(sql, news.getTitle(),news.getCover(),news.getBody(),news.getNews_img(),news.getCreate_time(),news.getId());
         } catch (SQLException e) {
             e.printStackTrace();
         }

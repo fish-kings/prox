@@ -33,7 +33,9 @@ public class addNewsServlet extends HttpServlet {
         News news=new News();
         String realPath=this.getServletContext().getRealPath("/upload/image");
         Map<String,String[]> newsMap=request.getParameterMap();
-
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        String format=sdf.format(date);
         //获取真正上传的图片名称
 
         try {
@@ -46,9 +48,7 @@ public class addNewsServlet extends HttpServlet {
                 news.setCover("/upload/image/"+realName);
 
                 //设置上传时间
-                Date date = new Date();
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-                String format=sdf.format(date);
+
                 System.out.println(format);
                 news.setCreate_time(format);
                 news.setNews_img(src.toString());
@@ -68,6 +68,7 @@ public class addNewsServlet extends HttpServlet {
 
                     String newPathName=UploadUtils.Upload(request,this.getServletContext().getRealPath("/upload/image"));
                     news.setCover("/upload/image/"+newPathName);
+                    news.setCreate_time(format);
                 }
                 newsService.updateNews(news);
             }
